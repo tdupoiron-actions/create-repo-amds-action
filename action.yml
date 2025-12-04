@@ -1,0 +1,34 @@
+name: 'Create Repository in Organization'
+description: 'Creates a new GitHub repository in a specified organization using the GitHub API'
+author: 'Your Name'
+
+inputs:
+  github-token:
+    description: 'GitHub token with repo creation permissions'
+    required: true
+  org-name:
+    description: 'Organization name where the repository will be created'
+    required: true
+  repo-name:
+    description: 'Name of the repository to create'
+    required: true
+  repo-visibility:
+    description: 'Repository visibility (public or private)'
+    required: false
+    default: 'private'
+
+outputs:
+  repository-url:
+    description: 'URL of the created repository'
+  clone-url:
+    description: 'Clone URL of the created repository'
+  repository-id:
+    description: 'ID of the created repository'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'git-branch'
+  color: 'blue'

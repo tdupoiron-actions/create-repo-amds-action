@@ -1,0 +1,26 @@
+{
+  "name": "create-repo-amds-action",
+  "version": "1.0.0",
+  "description": "Simple JavaScript app to create GitHub repositories using Octokit SDK",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "ncc build index.js -o dist",
+    "package": "npm run build"
+  },
+  "keywords": [
+    "github",
+    "octokit",
+    "repository",
+    "automation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@octokit/rest": "^20.0.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.4"
+  }
+}
